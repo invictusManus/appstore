@@ -217,3 +217,20 @@ greenlight scan --app-id $APP_ID --format junit --output greenlight.xml
 Greenlight catches App Store rejections. [Revyl](https://revyl.com) catches bugs.
 
 The mobile reliability platform. AI-powered testing for mobile apps — write tests in natural language, run them on real devices.
+
+## Cleaning Service Demo Website
+
+This repository now includes a single-page marketing website for a cleaning service in `site/`.
+
+### Run locally
+
+```bash
+cd site
+python3 -m http.server 8080
+```
+
+Then open `http://localhost:8080`.
+
+### Deployment
+
+A GitHub Actions workflow (`.github/workflows/deploy-cleaning-site.yml`) publishes the `site/` directory to GitHub Pages whenever changes are pushed to `main`.

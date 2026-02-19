@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreshNest Cleaning Services</title>
+    <meta
+      name="description"
+      content="FreshNest Cleaning Services offers reliable home, office, and move-in/move-out cleaning with eco-friendly products."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="navbar container">
+        <a href="#top" class="brand">FreshNest</a>
+        <a class="cta-btn" href="#contact">Book a Cleaning</a>
+      </nav>
+
+      <section class="hero-content container">
+        <p class="eyebrow">Trusted local cleaning service</p>
+        <h1>Sparkling homes and spotless offices, every time.</h1>
+        <p class="hero-subtitle">
+          Flexible plans, vetted professionals, and eco-friendly products that are safe for
+          families, pets, and workplaces.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#contact">Get a Free Quote</a>
+          <a class="secondary-btn" href="#services">Explore Services</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section container" id="services">
+        <h2>Services tailored to your space</h2>
+        <div class="service-grid">
+          <article class="card">
+            <h3>Residential Cleaning</h3>
+            <p>Weekly, bi-weekly, and monthly cleanings customized to your home and schedule.</p>
+          </article>
+          <article class="card">
+            <h3>Commercial Cleaning</h3>
+            <p>After-hours office cleaning to keep your team productive in a healthy environment.</p>
+          </article>
+          <article class="card">
+            <h3>Move In / Move Out</h3>
+            <p>Deep cleaning for a fresh start with special attention to kitchens and bathrooms.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt" id="why-us">
+        <div class="container split">
+          <div>
+            <h2>Why choose FreshNest?</h2>
+            <ul>
+              <li>Background-checked and trained cleaners</li>
+              <li>100% satisfaction guarantee</li>
+              <li>Insured and bonded for peace of mind</li>
+              <li>Green, non-toxic cleaning supplies</li>
+            </ul>
+          </div>
+          <aside class="stats">
+            <p><strong>1,200+</strong> homes cleaned</p>
+            <p><strong>4.9/5</strong> average customer rating</p>
+            <p><strong>7 days</strong> a week availability</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section container" id="contact">
+        <h2>Request your free estimate</h2>
+        <p class="contact-copy">
+          Tell us about your space and we’ll send a personalized quote within 24 hours.
+        </p>
+        <form class="contact-form" action="#" method="post">
+          <label>
+            Full Name
+            <input type="text" name="name" placeholder="Jamie Taylor" required />
+          </label>
+          <label>
+            Email Address
+            <input type="email" name="email" placeholder="jamie@example.com" required />
+          </label>
+          <label>
+            Service Needed
+            <select name="service" required>
+              <option value="">Select a service</option>
+              <option>Residential Cleaning</option>
+              <option>Commercial Cleaning</option>
+              <option>Move In / Move Out</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Share your cleaning needs"></textarea>
+          </label>
+          <button type="submit" class="primary-btn">Send Request</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> FreshNest Cleaning Services. All rights reserved.</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
