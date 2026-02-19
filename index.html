@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glasreinigung Hannover | Professionelle Fensterreinigung</title>
+    <meta
+      name="description"
+      content="Glasreinigung Hannover – professionelle, zuverlässige und streifenfreie Fenster- und Glasreinigung für Privat und Gewerbe."
+    />
+    <style>
+      :root {
+        --bg: #fafafa;
+        --surface: rgba(255, 255, 255, 0.68);
+        --surface-strong: #ffffff;
+        --text: #1f2230;
+        --muted: #6a6e87;
+        --purple: #7a4bff;
+        --purple-dark: #6337db;
+        --border: rgba(122, 75, 255, 0.2);
+        --shadow: 0 20px 45px rgba(108, 73, 228, 0.16);
+        --radius: 20px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at 0% 0%, rgba(122, 75, 255, 0.12), transparent 45%),
+          radial-gradient(circle at 100% 30%, rgba(122, 75, 255, 0.1), transparent 38%), var(--bg);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: min(1120px, 92%);
+        margin-inline: auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        background: rgba(250, 250, 250, 0.78);
+        border-bottom: 1px solid rgba(122, 75, 255, 0.14);
+      }
+
+      .nav {
+        min-height: 76px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .logo {
+        font-weight: 800;
+        font-size: 1.06rem;
+        letter-spacing: 0.2px;
+      }
+
+      .logo span {
+        color: var(--purple);
+      }
+
+      .nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: end;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 500;
+        transition: color 0.22s ease;
+      }
+
+      .nav a:hover {
+        color: var(--purple);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 999px;
+        padding: 12px 22px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      }
+
+      .btn-primary {
+        color: #fff;
+        background: linear-gradient(135deg, var(--purple), #8a5fff);
+        box-shadow: 0 10px 24px rgba(122, 75, 255, 0.35);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, var(--purple-dark), var(--purple));
+      }
+
+      .hero {
+        padding: 96px 0 72px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr;
+        gap: 32px;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 5.5vw, 3.6rem);
+        line-height: 1.13;
+        margin-bottom: 18px;
+      }
+
+      .hero p {
+        color: var(--muted);
+        font-size: 1.05rem;
+        max-width: 58ch;
+      }
+
+      .hero-actions {
+        margin-top: 28px;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: var(--radius);
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-card {
+        position: relative;
+      }
+
+      .hero-card::before,
+      .hero-card::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        border-radius: 999px;
+        filter: blur(34px);
+      }
+
+      .hero-card::before {
+        width: 180px;
+        height: 180px;
+        background: rgba(122, 75, 255, 0.3);
+        top: -40px;
+        right: -20px;
+      }
+
+      .hero-card::after {
+        width: 110px;
+        height: 110px;
+        background: rgba(122, 75, 255, 0.24);
+        bottom: -28px;
+        left: -18px;
+      }
+
+      .metrics {
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .metric {
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(122, 75, 255, 0.14);
+        border-radius: 16px;
+        padding: 14px;
+      }
+
+      .metric strong {
+        font-size: 1.2rem;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 34px;
+      }
+
+      .section-title h2 {
+        font-size: clamp(1.5rem, 4.8vw, 2.4rem);
+        margin-bottom: 10px;
+      }
+
+      .section-title p {
+        color: var(--muted);
+      }
+
+      .services-grid,
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .service h3,
+      .review h3 {
+        margin-bottom: 8px;
+      }
+
+      .service p,
+      .review p {
+        color: var(--muted);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      .about-list {
+        list-style: none;
+        margin-top: 14px;
+      }
+
+      .about-list li {
+        margin-bottom: 10px;
+        color: var(--muted);
+      }
+
+      .about-list li::before {
+        content: "✓";
+        color: var(--purple);
+        font-weight: 700;
+        margin-right: 10px;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      form {
+        display: grid;
+        gap: 12px;
+      }
+
+      label {
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--border);
+        background: #fff;
+        border-radius: 12px;
+        font: inherit;
+        padding: 12px 14px;
+        color: var(--text);
+        outline: none;
+        transition: box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: var(--purple);
+        box-shadow: 0 0 0 3px rgba(122, 75, 255, 0.15);
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .hint {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      footer {
+        border-top: 1px solid rgba(122, 75, 255, 0.14);
+        padding: 22px 0;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+      }
+
+      footer p {
+        text-align: center;
+        color: var(--muted);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .about-grid,
+        .contact-grid,
+        .services-grid,
+        .reviews-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 70px;
+        }
+
+        .metrics {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .nav {
+          padding: 10px 0;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .nav ul {
+          justify-content: flex-start;
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="logo">Glasreinigung <span>Hannover</span></div>
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#bewertungen">Bewertungen</a></li>
+          <li><a href="#kontakt" class="btn btn-primary">Anfrage senden</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="reveal visible">
+            <h1>Streifenfreie Glasreinigung in Hannover – zuverlässig & modern.</h1>
+            <p>
+              Wir reinigen Fenster, Glasfassaden und Wintergärten mit professionellen Methoden,
+              transparenten Preisen und flexiblen Terminen – für Privatkunden und Unternehmen.
+            </p>
+            <div class="hero-actions">
+              <a href="#kontakt" class="btn btn-primary">Jetzt kostenlos anfragen</a>
+              <a href="#leistungen" class="btn" style="border:1px solid var(--border); background:#fff"
+                >Unsere Leistungen</a
+              >
+            </div>
+          </div>
+
+          <article class="card hero-card reveal">
+            <h3>Warum Glasreinigung Hannover?</h3>
+            <p class="hint">
+              Regionaler Service mit geschultem Team, fairen Angeboten und sauberer Arbeit bis ins
+              Detail.
+            </p>
+            <div class="metrics">
+              <div class="metric">
+                <strong>10+</strong>
+                <p>Jahre Erfahrung</p>
+              </div>
+              <div class="metric">
+                <strong>1.500+</strong>
+                <p>Zufriedene Kunden</p>
+              </div>
+              <div class="metric">
+                <strong>24h</strong>
+                <p>Antwort auf Anfragen</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="leistungen">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Unsere Leistungen</h2>
+            <p>Maßgeschneiderte Reinigungskonzepte für jede Immobilie.</p>
+          </div>
+          <div class="services-grid">
+            <article class="card service reveal">
+              <h3>Fensterreinigung</h3>
+              <p>
+                Innen- und Außenreinigung Ihrer Fenster inklusive Rahmen und Fensterbänke.
+                Regelmäßig oder als Einmal-Service.
+              </p>
+            </article>
+            <article class="card service reveal">
+              <h3>Glasfassaden</h3>
+              <p>
+                Professionelle Reinigung großer Glasflächen bei Büros, Praxen und Gewerbeobjekten
+                mit sicherer Ausrüstung.
+              </p>
+            </article>
+            <article class="card service reveal">
+              <h3>Wintergärten</h3>
+              <p>
+                Schonende Glas- und Rahmenpflege für Wintergärten und Terrassenüberdachungen –
+                inklusive schwer erreichbarer Flächen.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="ueber-uns">
+        <div class="container about-grid">
+          <article class="card reveal">
+            <h2>Ihr Partner für klare Sicht</h2>
+            <p>
+              Glasreinigung Hannover steht für Qualität, Zuverlässigkeit und freundlichen Service.
+              Wir arbeiten mit umweltverträglichen Reinigungsmitteln und modernem Equipment.
+            </p>
+            <ul class="about-list">
+              <li>Termintreu und diskret bei Privat- und Gewerbeobjekten</li>
+              <li>Nachhaltige Reinigungsmethoden mit hoher Materialschonung</li>
+              <li>Persönliche Beratung und transparente Festpreise</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>So läuft es ab</h3>
+            <p>
+              1. Anfrage per Formular oder E-Mail<br />
+              2. Kostenloses Angebot innerhalb von 24 Stunden<br />
+              3. Reinigung zum Wunschtermin durch unser Team
+            </p>
+            <p style="margin-top: 12px" class="hint">
+              Unser Ziel: sichtbare Sauberkeit und langfristig gepflegte Glasflächen.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="bewertungen">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Kundenbewertungen</h2>
+            <p>Das sagen unsere Kundinnen und Kunden aus Hannover.</p>
+          </div>
+          <div class="reviews-grid">
+            <article class="card review reveal">
+              <h3>★★★★★ – Familie Neumann</h3>
+              <p>
+                „Sehr pünktlich, freundlich und gründlich. Unsere Fenster waren lange nicht so
+                sauber. Klare Empfehlung!“
+              </p>
+            </article>
+            <article class="card review reveal">
+              <h3>★★★★★ – Praxis am Maschsee</h3>
+              <p>
+                „Top Service für unsere Glasfront. Die Terminabsprachen sind unkompliziert und das
+                Ergebnis jedes Mal einwandfrei.“
+              </p>
+            </article>
+            <article class="card review reveal">
+              <h3>★★★★★ – Bürozentrum List</h3>
+              <p>
+                „Professionell, schnell und fair im Preis. Wir haben direkt einen regelmäßigen
+                Intervall gebucht.“
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontakt">
+        <div class="container contact-grid">
+          <article class="card reveal">
+            <h2>Kontakt per E-Mail</h2>
+            <p>
+              Beschreiben Sie kurz Ihr Objekt und den gewünschten Zeitraum. Wir melden uns schnell
+              mit einem unverbindlichen Angebot.
+            </p>
+            <p class="hint" style="margin-top: 10px">
+              E-Mail: kontakt@glasreinigung-hannover.de<br />
+              Telefon: 0511 1234567
+            </p>
+          </article>
+          <article class="card reveal">
+            <form>
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Ihr Name" required />
+              </div>
+              <div>
+                <label for="email">E-Mail</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="ihre@email.de"
+                  required
+                />
+              </div>
+              <div>
+                <label for="message">Nachricht</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Welche Glasflächen sollen gereinigt werden?"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Anfrage absenden</button>
+              <p class="hint">*Dies ist ein Demo-Formular ohne Backend-Anbindung.</p>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 Glasreinigung Hannover · Professionelle Glas- und Fensterreinigung in Hannover</p>
+      </div>
+    </footer>
+
+    <script>
+      const revealElements = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.18 }
+      );
+      revealElements.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

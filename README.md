@@ -217,3 +217,17 @@ greenlight scan --app-id $APP_ID --format junit --output greenlight.xml
 Greenlight catches App Store rejections. [Revyl](https://revyl.com) catches bugs.
 
 The mobile reliability platform. AI-powered testing for mobile apps — write tests in natural language, run them on real devices.
+
+## Website Deployment
+
+The landing page is deployed automatically to **GitHub Pages** via `.github/workflows/deploy-website.yml`.
+
+- Deployment triggers on pushes to `main` when `index.html` or `website/**` changes.
+- You can also trigger it manually from the **Actions** tab (`Deploy Website`).
+- The workflow publishes `index.html` and `website/index.html` as a static site artifact.
+
+If this is the first deployment, enable Pages in repository settings:
+
+1. Go to **Settings → Pages**.
+2. Set **Source** to **GitHub Actions**.
+3. Re-run the **Deploy Website** workflow if needed.
